@@ -17,8 +17,8 @@ const Home: React.FC = () => {
               Welcome to My Portfolio
             </h1>
             <p className="text-lg text-gray-200">
-              I'm Mahesh Bairi, a Frontend Developer specializing in React.js,
-              Next.js, and React Native.
+              This is Mahesh Bairi, a Frontend Developer specializing in
+              React.js, Next.js, and React Native.
             </p>
           </div>
           <div className="relative w-64 h-64 ml-20">
