@@ -67,8 +67,7 @@ const Home: React.FC = () => {
           </ul>
         </section>
       </main>
-
-      <footer className="fixed bottom-0 left-0 w-full bg-gray-500 bg-opacity-80 text-center py-4">
+      <footer className="w-full bg-gray-500 bg-opacity-80 text-center py-4 md:fixed md:bottom-0">
         <p className="text-gray-300">
           &copy; 2025 Mahesh Bairi. All rights reserved.
         </p>
