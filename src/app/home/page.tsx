@@ -49,8 +49,8 @@ const Home: React.FC = () => {
           </a>
         </div>
 
-        <section className="mt-16">
-          <h2 className="text-3xl font-bold text-center text-white mb-8">
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold text-center text-white mb-8">
             Technologies
           </h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
                 key={index}
                 className="bg-gradient-to-r from-white via-cyan-300 to-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow transform hover:scale-105"
               >
-                <h3 className="text-xl font-semibold text-gray-800 text-center">
+                <h3 className="text-lg font-semibold text-gray-800 text-center">
                   {project}
                 </h3>
               </li>
