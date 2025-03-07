@@ -3,45 +3,53 @@ import myPhoto from "../images/profile.jpg";
 import Image from "next/image";
 
 const Home: React.FC = () => {
-  const projects = ["NextJs", "ReactJs", "React Native"];
+  const projects = ["Next.js", "React.js", "React Native"];
 
   const resumeLink =
-    "https://drive.google.com/uc?export=download&id=1LxfwUZK2ls7YBiG0cOrPRrJffCZEGGLS";
+    "https://drive.google.com/uc?export=download&id=1Ma6wAhnBq-4htUiSKmpDRUwKI3q6OBSr";
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-500 to-indigo-600 p-6 px-20">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-600 to-purple-800 p-6 px-20 relative">
       <main className="flex-grow">
         <section className="text-center my-10 flex flex-col items-center md:flex-row md:justify-center">
-          <div>
-            <h1 className="text-5xl font-bold text-white mb-4">
+          <div className="text-center md:text-left">
+            <h1 className="text-6xl font-bold leading-snug text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-pink-300 to-gray-300 mb-4 pb-2">
               Welcome to My Portfolio
             </h1>
-            <p className="text-lg text-gray-200">
-              This is Mahesh Bairi, a Frontend Developer specializing in
-              React.js, Next.js, and React Native.
+
+            <p className="text-lg text-gray-100 max-w-xl">
+              I&apos;m <span className="font-semibold">Mahesh Bairi</span>, a
+              Frontend Developer with 5 years of experience. I specialize in
+              building high-performance, scalable, and user-friendly web and
+              Mobile applications using{" "}
+              <span className="font-semibold">
+                React.js, Next.js, and React Native
+              </span>
+              . Passionate about UI/UX design and performance optimization.
             </p>
           </div>
-          <div className="relative w-64 h-64 ml-20">
+          <div className="relative w-64 h-64 ml-10 mt-6 md:mt-0">
             <Image
               src={myPhoto.src}
               alt="Profile"
-              className="rounded-full object-cover"
+              className="rounded-full object-cover border-4 border-white shadow-lg shadow-black"
               layout="fill"
             />
           </div>
         </section>
+
         <div className="text-center">
           <a
             href={resumeLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block bg-white text-gray-800 font-semibold py-2 px-4 rounded shadow hover:bg-gray-200 transition"
+            className="mt-12 inline-block bg-white text-gray-800 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-300 transition transform hover:scale-105"
           >
-            Download Resume
+            📄 Download Resume
           </a>
         </div>
 
-        <section className="mt-16">
+        <section className="mt-24">
           <h2 className="text-3xl font-bold text-center text-white mb-8">
             Technologies
           </h2>
@@ -49,9 +57,9 @@ const Home: React.FC = () => {
             {projects.map((project, index) => (
               <li
                 key={index}
-                className="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow"
+                className="bg-gradient-to-r from-white via-cyan-300 to-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow transform hover:scale-105"
               >
-                <h3 className="text-xl font-semibold text-gray-800">
+                <h3 className="text-xl font-semibold text-gray-800 text-center">
                   {project}
                 </h3>
               </li>
@@ -60,9 +68,9 @@ const Home: React.FC = () => {
         </section>
       </main>
 
-      <footer className="text-center py-6">
-        <p className="text-gray-200">
-          &copy; 2024 Mahesh Bairi. All rights reserved.
+      <footer className="fixed bottom-0 left-0 w-full bg-gray-500 bg-opacity-80 text-center py-4">
+        <p className="text-gray-300">
+          &copy; 2025 Mahesh Bairi. All rights reserved.
         </p>
       </footer>
     </div>
