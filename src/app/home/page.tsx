@@ -4,19 +4,17 @@ import Image from "next/image";
 
 const Home: React.FC = () => {
   const projects = ["Next.js", "React.js", "React Native"];
-
   const resumeLink =
     "https://drive.google.com/uc?export=download&id=1Ma6wAhnBq-4htUiSKmpDRUwKI3q6OBSr";
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-600 to-purple-800 p-6 px-20 relative">
-      <main className="flex-grow">
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-grow pb-20 bg-gradient-to-b from-blue-600 to-purple-800 p-6 px-20 relative">
         <section className="text-center my-10 flex flex-col items-center md:flex-row md:justify-center">
           <div className="text-center md:text-left">
             <h1 className="text-6xl font-bold leading-snug text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-pink-300 to-gray-300 mb-4 pb-2">
               Welcome to My Portfolio
             </h1>
-
             <p className="text-lg text-gray-100 max-w-xl">
               I&apos;m <span className="font-semibold">Mahesh Bairi</span>, a
               Frontend Developer with 5 years of experience. I specialize in
@@ -49,8 +47,8 @@ const Home: React.FC = () => {
           </a>
         </div>
 
-        <section className="mt-12">
-          <h2 className="text-2xl font-bold text-center text-white mb-8">
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold text-center text-white mb-8">
             Technologies
           </h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
@@ -59,7 +57,7 @@ const Home: React.FC = () => {
                 key={index}
                 className="bg-gradient-to-r from-white via-cyan-300 to-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow transform hover:scale-105"
               >
-                <h3 className="text-lg font-semibold text-gray-800 text-center">
+                <h3 className="text-xl font-semibold text-gray-800 text-center">
                   {project}
                 </h3>
               </li>
@@ -67,8 +65,9 @@ const Home: React.FC = () => {
           </ul>
         </section>
       </main>
-      <footer className="w-full bg-gray-500 bg-opacity-80 text-center py-4 md:fixed md:bottom-0">
-        <p className="text-gray-300">
+
+      <footer className="bg-gray-700 bg-opacity-20 text-center py-3">
+        <p className="text-gray-300 text-black">
           &copy; 2025 Mahesh Bairi. All rights reserved.
         </p>
       </footer>
