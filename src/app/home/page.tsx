@@ -49,7 +49,7 @@ const Home: React.FC = () => {
           </a>
         </div>
 
-        <section className="mt-24">
+        <section className="mt-16">
           <h2 className="text-3xl font-bold text-center text-white mb-8">
             Technologies
           </h2>
