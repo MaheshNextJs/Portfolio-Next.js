@@ -5,7 +5,7 @@ import Image from "next/image";
 const Home: React.FC = () => {
   const projects = ["Next.js", "React.js", "React Native"];
   const resumeLink =
-    "https://drive.google.com/uc?export=download&id=1Ma6wAhnBq-4htUiSKmpDRUwKI3q6OBSr";
+    "https://drive.google.com/uc?export=download&id=1tPjHHk7OBShCCUfDHBbipXZa0o5ENbED";
 
   return (
     <div className="min-h-screen flex flex-col">
