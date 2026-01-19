@@ -14,8 +14,10 @@ const Home: React.FC = () => {
     "Redux / Zustand",
   ];
 
+  // const resumeLink =
+  //   "https://drive.google.com/uc?export=download&id=1Jrnv4kRvP_AsdvVDHHWeOtbsp57uqUDb";
   const resumeLink =
-    "https://drive.google.com/uc?export=download&id=1Jrnv4kRvP_AsdvVDHHWeOtbsp57uqUDb";
+    "https://drive.google.com/uc?export=download&id=1hRWh1ZGm2wNQaquY4BBy6otkiEc9-1qu";
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-white">
