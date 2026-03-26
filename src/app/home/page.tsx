@@ -71,7 +71,7 @@ const contactLinks = [
   },
   {
     label: "Email",
-    href: "mailto:maheshbairi.dev@gmail.com",
+    href: "mailto:maheshbairi3@gmail.com",
   },
   {
     label: "Resume",
@@ -121,15 +121,15 @@ export default function Home() {
               </div>
 
               <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-white md:text-6xl">
-                Designing sharp, production-ready interfaces for web and
-                mobile products.
+                Designing sharp, production-ready interfaces for web and mobile
+                products.
               </h1>
 
               <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
-                I build clean and scalable user interfaces with React,
-                Next.js, and React Native. My focus is practical: reliable
-                delivery, strong UX, and maintainable frontend systems that
-                hold up as products grow.
+                I build clean and scalable user interfaces with React, Next.js,
+                and React Native. My focus is practical: reliable delivery,
+                strong UX, and maintainable frontend systems that hold up as
+                products grow.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -137,9 +137,7 @@ export default function Home() {
                   <a
                     key={link.label}
                     href={link.href}
-                    target={
-                      link.href.startsWith("http") ? "_blank" : undefined
-                    }
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
                     rel={
                       link.href.startsWith("http")
                         ? "noopener noreferrer"
@@ -228,9 +226,9 @@ export default function Home() {
             <div className="space-y-5 text-slate-300">
               <p className="leading-8">
                 I enjoy turning complex product requirements into clear,
-                polished interfaces. My work is centered on reusable
-                components, clean structure, responsive behavior, and delivery
-                quality that supports real production teams.
+                polished interfaces. My work is centered on reusable components,
+                clean structure, responsive behavior, and delivery quality that
+                supports real production teams.
               </p>
               <div className="grid gap-3">
                 {highlights.map((item) => (
@@ -382,10 +380,10 @@ export default function Home() {
                   9502558103
                 </a>
                 <a
-                  href="mailto:maheshbairi.dev@gmail.com"
+                  href="mailto:maheshbairi3@gmail.com"
                   className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
-                  maheshbairi.dev@gmail.com
+                  maheshbairi3@gmail.com
                 </a>
               </div>
             </div>
