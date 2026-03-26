@@ -1,195 +1,402 @@
-"use client";
-import React, { useState } from "react";
-import myPhoto from "../images/profile.jpg";
 import Image from "next/image";
+import myPhoto from "../images/profile.jpg";
 
-const Home: React.FC = () => {
-  const [hover, setHover] = useState(false);
-  const technologies = [
-    "Next.js",
-    "React.js",
-    "React Native",
-    "TypeScript",
-    "Tailwind CSS",
-    "Redux / Zustand",
-  ];
+const skillGroups = [
+  {
+    title: "Frontend",
+    items: ["Next.js", "React.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    title: "Mobile",
+    items: ["React Native", "Expo", "Responsive UI", "App Performance"],
+  },
+  {
+    title: "Architecture",
+    items: ["Redux", "Zustand", "Reusable Systems", "API Integration"],
+  },
+];
 
-  // const resumeLink =
-  //   "https://drive.google.com/uc?export=download&id=1Jrnv4kRvP_AsdvVDHHWeOtbsp57uqUDb";
-  const resumeLink =
-    "https://drive.google.com/uc?export=download&id=1hRWh1ZGm2wNQaquY4BBy6otkiEc9-1qu";
+const featuredProjects = [
+  {
+    title: "Insurance Self-Service Platform",
+    description:
+      "Built responsive customer journeys for policy management, payments, and claims with a focus on speed, reliability, and conversion.",
+    tags: ["Next.js", "React", "TypeScript"],
+  },
+  {
+    title: "E-commerce Experience Layer",
+    description:
+      "Delivered storefront UI modules, reusable product flows, and performance improvements for high-traffic browsing and checkout journeys.",
+    tags: ["React", "Tailwind", "State Management"],
+  },
+  {
+    title: "SaaS Admin Dashboard",
+    description:
+      "Created scalable dashboard surfaces with reusable components, filters, and data-heavy workflows designed for daily operational use.",
+    tags: ["Next.js", "Design Systems", "Optimization"],
+  },
+];
 
+const highlights = [
+  "5+ years building production web and mobile interfaces",
+  "Shipped 10+ projects across insurance, e-commerce, and SaaS",
+  "Strong focus on performance, maintainability, and pixel-accurate UI",
+];
+
+const experiencePoints = [
+  {
+    period: "Frontend Engineering",
+    title: "Scalable UI Delivery",
+    description:
+      "Built reusable components and structured frontends that stayed maintainable as product scope expanded.",
+  },
+  {
+    period: "Performance Work",
+    title: "Faster Interfaces",
+    description:
+      "Improved perceived speed through code splitting, bundle cleanup, and smoother client-side interactions.",
+  },
+  {
+    period: "Team Collaboration",
+    title: "Design to Production",
+    description:
+      "Worked closely with product, backend, and design teams to turn complex requirements into simple user flows.",
+  },
+];
+
+const contactLinks = [
+  {
+    label: "Call",
+    href: "tel:9502558103",
+  },
+  {
+    label: "Email",
+    href: "mailto:maheshbairi.dev@gmail.com",
+  },
+  {
+    label: "Resume",
+    href: "https://drive.google.com/uc?export=download&id=1hRWh1ZGm2wNQaquY4BBy6otkiEc9-1qu",
+  },
+];
+
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-white">
-      {/* MAIN */}
-      <main className="flex-grow pb-20 px-6 md:px-16 lg:px-24">
-        {/* HERO SECTION */}
-        <section className="pt-16 md:pt-24 flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
-          {/* LEFT CONTENT */}
-          <div className="max-w-2xl">
-            <p className="uppercase tracking-[0.3em] text-xs md:text-sm text-sky-300 mb-3">
-              Frontend Web / Mobile Developer
-            </p>
+    <div className="min-h-screen overflow-hidden bg-[#07111f] text-slate-100">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.16),_transparent_28%),radial-gradient(circle_at_80%_20%,_rgba(251,191,36,0.14),_transparent_24%),linear-gradient(180deg,_#08101d_0%,_#07111f_45%,_#020617_100%)]" />
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-fuchsia-400 to-amber-300">
-                Hi, I&apos;m Mahesh Bairi
-              </span>
-              <span className="block mt-2 text-slate-100">
-                I build clean, fast & scalable UIs.
-              </span>
-            </h1>
-
-            <p className="text-sm md:text-base text-slate-300 leading-relaxed mb-6">
-              I&apos;m a{" "}
-              <span className="font-semibold">Frontend Developer</span> with{" "}
-              <span className="font-semibold">5+ years</span> of experience
-              building high-performance, scalable, and user-friendly{" "}
-              <span className="font-semibold">web and mobile applications</span>{" "}
-              using{" "}
-              <span className="font-semibold">
-                React.js, Next.js and React Native
-              </span>
-              . I love crafting pixel-perfect UIs, optimizing performance, and
-              creating smooth user experiences.
-            </p>
-
-            {/* CTA BUTTONS */}
-            <div className="flex flex-wrap gap-4 items-center mb-6">
-              <a
-                href={resumeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold py-3 px-6 rounded-full shadow-lg shadow-sky-500/30 transition-transform hover:scale-105"
-              >
-                ⬇️ Download Resume
-              </a>
-
-              <a
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-                className="cursor-pointer inline-block bg-white text-gray-800 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-300 transition transform hover:scale-105"
-              >
-                {hover ? "9502558103" : "📞 Contact Me"}
-              </a>
+      <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-6 md:px-10 lg:px-12">
+        <header className="sticky top-0 z-20 mb-10 rounded-full border border-white/10 bg-slate-950/65 px-4 py-3 backdrop-blur md:mb-16">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">
+                Mahesh Bairi
+              </p>
+              <p className="text-xs text-slate-400">
+                Frontend Web and Mobile Developer
+              </p>
             </div>
 
-            {/* QUICK STATS */}
-            <div className="flex flex-wrap gap-6 text-sm md:text-base">
-              <div>
-                <p className="text-2xl font-bold text-sky-300">5+</p>
-                <p className="text-slate-400">Years Experience</p>
+            <nav className="flex flex-wrap gap-3 text-sm text-slate-300">
+              <a className="transition hover:text-white" href="#about">
+                About
+              </a>
+              <a className="transition hover:text-white" href="#projects">
+                Projects
+              </a>
+              <a className="transition hover:text-white" href="#skills">
+                Skills
+              </a>
+              <a className="transition hover:text-white" href="#contact">
+                Contact
+              </a>
+            </nav>
+          </div>
+        </header>
+
+        <main className="space-y-24">
+          <section className="grid gap-14 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <div>
+              <div className="mb-6 inline-flex rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-sky-200">
+                Available for frontend roles
               </div>
-              <div>
-                <p className="text-2xl font-bold text-fuchsia-300">10+</p>
-                <p className="text-slate-400">Projects Delivered</p>
+
+              <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-white md:text-6xl">
+                Designing sharp, production-ready interfaces for web and
+                mobile products.
+              </h1>
+
+              <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
+                I build clean and scalable user interfaces with React,
+                Next.js, and React Native. My focus is practical: reliable
+                delivery, strong UX, and maintainable frontend systems that
+                hold up as products grow.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                {contactLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target={
+                      link.href.startsWith("http") ? "_blank" : undefined
+                    }
+                    rel={
+                      link.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    className="rounded-full border border-white/10 bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-sky-300"
+                  >
+                    {link.label}
+                  </a>
+                ))}
               </div>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-3">
+                <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-3xl font-semibold text-sky-300">5+</p>
+                  <p className="mt-2 text-sm text-slate-300">
+                    Years of frontend experience
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-3xl font-semibold text-amber-300">10+</p>
+                  <p className="mt-2 text-sm text-slate-300">
+                    Projects shipped in production
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-3xl font-semibold text-emerald-300">3+</p>
+                  <p className="mt-2 text-sm text-slate-300">
+                    Product domains delivered
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-md">
+              <div className="absolute -left-10 top-10 h-32 w-32 rounded-full bg-sky-400/20 blur-3xl" />
+              <div className="absolute -right-6 bottom-8 h-36 w-36 rounded-full bg-amber-300/20 blur-3xl" />
+
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl shadow-black/40">
+                <div className="mb-5 rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-4">
+                  <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
+                    Frontend profile
+                  </p>
+                  <p className="mt-2 text-lg font-semibold text-white">
+                    UI engineer with product focus
+                  </p>
+                </div>
+
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem]">
+                  <Image
+                    src={myPhoto}
+                    alt="Mahesh Bairi portrait"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+
+                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                  {["React", "Next.js", "React Native"].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-center text-sm text-slate-200"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="about"
+            className="grid gap-6 rounded-[2rem] border border-white/10 bg-white/5 p-8 lg:grid-cols-[0.8fr_1.2fr]"
+          >
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-sky-300">
+                About
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">
+                Frontends that stay fast, clear, and maintainable.
+              </h2>
+            </div>
+
+            <div className="space-y-5 text-slate-300">
+              <p className="leading-8">
+                I enjoy turning complex product requirements into clear,
+                polished interfaces. My work is centered on reusable
+                components, clean structure, responsive behavior, and delivery
+                quality that supports real production teams.
+              </p>
+              <div className="grid gap-3">
+                {highlights.map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-4 text-sm"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="projects" className="space-y-6">
+            <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="text-2xl font-bold text-amber-300">3+</p>
-                <p className="text-slate-400">
-                  Domains (Insurance, E-com, SaaS)
+                <p className="text-sm uppercase tracking-[0.3em] text-amber-300">
+                  Featured Work
+                </p>
+                <h2 className="mt-2 text-3xl font-semibold text-white">
+                  Product-facing projects and delivery strengths.
+                </h2>
+              </div>
+              <p className="max-w-2xl text-sm leading-7 text-slate-400">
+                This section highlights the kind of systems and product surfaces
+                I have worked on, with emphasis on UX quality, scale, and
+                maintainable implementation.
+              </p>
+            </div>
+
+            <div className="grid gap-6 lg:grid-cols-3">
+              {featuredProjects.map((project) => (
+                <article
+                  key={project.title}
+                  className="rounded-[1.75rem] border border-white/10 bg-slate-950/65 p-6 transition hover:-translate-y-1 hover:border-sky-300/40"
+                >
+                  <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
+                    Case Study
+                  </p>
+                  <h3 className="mt-4 text-xl font-semibold text-white">
+                    {project.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-slate-300">
+                    {project.description}
+                  </p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="grid gap-6 lg:grid-cols-[1fr_1fr]">
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
+              <p className="text-sm uppercase tracking-[0.3em] text-emerald-300">
+                Experience
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">
+                Delivery patterns that matter in real teams.
+              </h2>
+              <div className="mt-8 space-y-5">
+                {experiencePoints.map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-3xl border border-white/10 bg-slate-950/60 p-5"
+                  >
+                    <p className="text-xs uppercase tracking-[0.25em] text-slate-500">
+                      {item.period}
+                    </p>
+                    <h3 className="mt-2 text-lg font-semibold text-white">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-slate-300">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <section
+              id="skills"
+              className="rounded-[2rem] border border-white/10 bg-slate-950/65 p-8"
+            >
+              <p className="text-sm uppercase tracking-[0.3em] text-sky-300">
+                Skills
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold text-white">
+                Core technologies I use regularly.
+              </h2>
+              <div className="mt-8 space-y-5">
+                {skillGroups.map((group) => (
+                  <div
+                    key={group.title}
+                    className="rounded-3xl border border-white/10 bg-white/5 p-5"
+                  >
+                    <h3 className="text-lg font-semibold text-white">
+                      {group.title}
+                    </h3>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {group.items.map((item) => (
+                        <span
+                          key={item}
+                          className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-slate-950"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </section>
+
+          <section
+            id="contact"
+            className="rounded-[2rem] border border-white/10 bg-gradient-to-r from-sky-400/15 via-white/5 to-amber-300/15 p-8 md:p-10"
+          >
+            <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+              <div className="max-w-2xl">
+                <p className="text-sm uppercase tracking-[0.3em] text-sky-200">
+                  Contact
+                </p>
+                <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+                  If the role needs strong UI execution, I can contribute
+                  quickly.
+                </h2>
+                <p className="mt-4 text-sm leading-7 text-slate-200">
+                  I am open to frontend opportunities involving React, Next.js,
+                  React Native, and modern product UI work.
                 </p>
               </div>
-            </div>
-          </div>
 
-          {/* PROFILE IMAGE */}
-          <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 mx-auto md:mx-0 mt-10 md:mt-0">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-sky-500 via-fuchsia-500 to-amber-400 blur-2xl opacity-40" />
-            <div className="relative w-full h-full rounded-full border border-slate-600/60 bg-slate-900/40 backdrop-blur-md shadow-2xl shadow-black/50 overflow-hidden">
-              <Image
-                src={myPhoto.src}
-                alt="Mahesh Bairi Profile"
-                className="object-cover"
-                fill
-              />
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="tel:9502558103"
+                  className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+                >
+                  9502558103
+                </a>
+                <a
+                  href="mailto:maheshbairi.dev@gmail.com"
+                  className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  maheshbairi.dev@gmail.com
+                </a>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </main>
 
-        {/* ABOUT SECTION */}
-        <section className="mt-16 md:mt-20 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4 border-l-4 border-sky-400 pl-3">
-            About Me
-          </h2>
-          <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-            I enjoy turning complex requirements into simple, clean and
-            intuitive interfaces. I focus on writing reusable, maintainable
-            components, following best practices and collaborating closely with
-            designers, backend engineers and stakeholders. I&apos;m comfortable
-            working in agile teams, reviewing code, and mentoring junior
-            developers.
-          </p>
-        </section>
-
-        {/* TECHNOLOGIES SECTION */}
-        <section className="mt-16 md:mt-20">
-          <h2 className="text-2xl md:text-3xl font-semibold text-white text-center mb-2">
-            Technologies & Tools
-          </h2>
-          <p className="text-sm text-slate-400 text-center mb-8">
-            These are the main technologies I use on a daily basis.
-          </p>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {technologies.map((tech, index) => (
-              <li
-                key={index}
-                className="bg-slate-900/60 border border-slate-700/70 rounded-xl py-4 px-3 text-center text-sm md:text-base font-medium text-slate-100 shadow-lg shadow-black/40 hover:shadow-sky-500/30 hover:border-sky-400/80 transition-transform hover:scale-105"
-              >
-                {tech}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* EXPERIENCE HIGHLIGHTS */}
-        <section className="mt-16 md:mt-20">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-white text-center">
-            Experience Highlights
-          </h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="bg-slate-900/70 border border-slate-700 rounded-xl p-5 shadow-lg">
-              <h3 className="font-semibold mb-2 text-sky-300 text-sm uppercase tracking-wide">
-                Performance & Optimization
-              </h3>
-              <p className="text-slate-300 text-sm">
-                Improved page load and interaction times by applying code
-                splitting, lazy loading, memoization and optimizing bundle size
-                in React / Next.js apps.
-              </p>
-            </div>
-            <div className="bg-slate-900/70 border border-slate-700 rounded-xl p-5 shadow-lg">
-              <h3 className="font-semibold mb-2 text-fuchsia-300 text-sm uppercase tracking-wide">
-                Scalable Architecture
-              </h3>
-              <p className="text-slate-300 text-sm">
-                Built reusable component libraries and folder structures,
-                integrated state management and followed clean code patterns for
-                long-term maintainability.
-              </p>
-            </div>
-            <div className="bg-slate-900/70 border border-slate-700 rounded-xl p-5 shadow-lg">
-              <h3 className="font-semibold mb-2 text-amber-300 text-sm uppercase tracking-wide">
-                UI / UX Focused
-              </h3>
-              <p className="text-slate-300 text-sm">
-                Translated Figma / design mocks into pixel-perfect UI, ensured
-                responsive layouts, smooth micro-interactions and accessibility
-                best practices.
-              </p>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      {/* FOOTER */}
-      <footer className="border-t border-slate-700/60 bg-slate-950/80 text-center py-4 mt-4">
-        <p className="text-xs md:text-sm text-slate-400">
-          &copy; {new Date().getFullYear()} Mahesh Bairi. All rights reserved.
-        </p>
-      </footer>
+        <footer className="mt-16 border-t border-white/10 pt-6 text-sm text-slate-500">
+          Copyright {new Date().getFullYear()} Mahesh Bairi. Built with Next.js
+          and Tailwind CSS.
+        </footer>
+      </div>
     </div>
   );
-};
-
-export default Home;
+}
