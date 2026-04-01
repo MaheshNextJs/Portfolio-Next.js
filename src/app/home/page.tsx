@@ -75,7 +75,7 @@ const contactLinks = [
   },
   {
     label: "Resume",
-    href: "https://drive.google.com/uc?export=download&id=1hRWh1ZGm2wNQaquY4BBy6otkiEc9-1qu",
+    href: "https://drive.google.com/uc?export=download&id=14q_9R5dNoGVj5v100u88PIJAgjOQQPWF",
   },
 ];
 
