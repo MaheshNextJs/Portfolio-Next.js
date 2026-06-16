@@ -4,26 +4,26 @@ import { experiencePoints } from "@/lib/data";
 
 export default function Experience() {
   return (
-    <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-      <p className="text-sm uppercase tracking-[0.3em] text-emerald-300">
+    <div className="rounded-lg border border-[#d0d5dd] bg-[#101828] p-6 text-white shadow-sm md:p-8">
+      <p className="text-sm font-black uppercase text-[#7dd3fc]">
         Experience
       </p>
-      <h2 className="mt-3 text-3xl font-semibold text-white">
+      <h2 className="mt-3 text-3xl font-black leading-tight text-white">
         Delivery patterns that matter in real teams.
       </h2>
-      <div className="mt-8 space-y-5">
+      <div className="mt-8 divide-y divide-white/15 border-y border-white/15">
         {experiencePoints.map((item) => (
           <div
             key={item.title}
-            className="rounded-3xl border border-white/10 bg-slate-950/60 p-5"
+            className="py-5"
           >
-            <p className="text-xs uppercase tracking-[0.25em] text-slate-500">
+            <p className="text-xs font-bold uppercase text-[#98a2b3]">
               {item.period}
             </p>
-            <h3 className="mt-2 text-lg font-semibold text-white">
+            <h3 className="mt-2 text-lg font-black text-white">
               {item.title}
             </h3>
-            <p className="mt-3 text-sm leading-7 text-slate-300">
+            <p className="mt-3 text-sm leading-7 text-[#d0d5dd]">
               {item.description}
             </p>
           </div>

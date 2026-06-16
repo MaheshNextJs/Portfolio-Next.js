@@ -11,13 +11,14 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-hidden bg-[#07111f] text-slate-100">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.16),_transparent_28%),radial-gradient(circle_at_80%_20%,_rgba(251,191,36,0.14),_transparent_24%),linear-gradient(180deg,_#08101d_0%,_#07111f_45%,_#020617_100%)]" />
+    <div className="min-h-screen overflow-hidden bg-[#f7f9fb] text-[#101828]">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[640px] bg-[linear-gradient(135deg,_#e0f2fe_0%,_#f8fafc_38%,_#ecfdf5_72%,_#fff7ed_100%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-[640px] h-px bg-[#d8dee8]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-6 md:px-10 lg:px-12">
+      <div className="relative mx-auto max-w-7xl px-5 pb-12 pt-5 md:px-8 lg:px-10">
         <Header />
 
-        <main className="space-y-24">
+        <main className="space-y-16 md:space-y-20">
           <Hero />
           <About />
           <Projects />

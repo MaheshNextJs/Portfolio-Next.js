@@ -6,93 +6,113 @@ import { contactLinks } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section className="grid gap-14 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-      <div>
-        <div className="mb-6 inline-flex rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-sky-200">
-          Available for frontend roles
+    <section className="pb-10 pt-4">
+      <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div>
+          <div className="inline-flex rounded-lg border border-[#bae6fd] bg-white/80 px-4 py-2 text-xs font-bold uppercase text-[#0369a1] shadow-sm">
+            Available for frontend roles
+          </div>
+
+          <h1 className="mt-6 max-w-4xl text-4xl font-black leading-tight text-[#101828] md:text-6xl">
+            Frontend developer crafting clean product experiences.
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-base leading-8 text-[#475467] md:text-lg">
+            I am Mahesh Bairi. I build fast, responsive, production-ready
+            interfaces with React, Next.js, and React Native.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            {contactLinks.map((link, index) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={
+                  link.href.startsWith("http")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
+                className={
+                  index === 2
+                    ? "rounded-lg border border-[#0f766e] bg-[#0f766e] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#115e59]"
+                    : "rounded-lg border border-[#d0d5dd] bg-white px-5 py-3 text-sm font-bold text-[#101828] shadow-sm transition hover:-translate-y-0.5 hover:border-[#0f766e] hover:text-[#0f766e]"
+                }
+              >
+                {link.label} {index === 2 ? "->" : ""}
+              </a>
+            ))}
+          </div>
+
+          <div className="mt-10 grid max-w-3xl gap-3 sm:grid-cols-3">
+            <div className="rounded-lg border border-[#d0d5dd] bg-white/80 p-4 shadow-sm">
+              <p className="text-3xl font-black text-[#2563eb]">5+</p>
+              <p className="mt-2 text-sm font-medium text-[#475467]">
+                Years experience
+              </p>
+            </div>
+            <div className="rounded-lg border border-[#d0d5dd] bg-white/80 p-4 shadow-sm">
+              <p className="text-3xl font-black text-[#f97316]">10+</p>
+              <p className="mt-2 text-sm font-medium text-[#475467]">
+                Projects shipped
+              </p>
+            </div>
+            <div className="rounded-lg border border-[#d0d5dd] bg-white/80 p-4 shadow-sm">
+              <p className="text-3xl font-black text-[#0f766e]">3+</p>
+              <p className="mt-2 text-sm font-medium text-[#475467]">
+                Product domains
+              </p>
+            </div>
+          </div>
         </div>
 
-        <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-white md:text-6xl">
-          Designing sharp, production-ready interfaces for web and mobile
-          products.
-        </h1>
-
-        <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
-          I build clean and scalable user interfaces with React, Next.js, and
-          React Native. My focus is practical: reliable delivery, strong UX, and
-          maintainable frontend systems that hold up as products grow.
-        </p>
-
-        <div className="mt-8 flex flex-wrap gap-4">
-          {contactLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.href.startsWith("http") ? "_blank" : undefined}
-              rel={
-                link.href.startsWith("http") ? "noopener noreferrer" : undefined
-              }
-              className="rounded-full border border-white/10 bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-sky-300"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-
-        <div className="mt-10 grid gap-4 sm:grid-cols-3">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-            <p className="text-3xl font-semibold text-sky-300">5+</p>
-            <p className="mt-2 text-sm text-slate-300">
-              Years of frontend experience
-            </p>
+        <div className="rounded-lg border border-white/70 bg-white/75 p-5 shadow-[0_24px_80px_rgba(15,23,42,0.12)] backdrop-blur">
+          <div className="flex items-center gap-4 border-b border-[#e4e7ec] pb-5">
+            <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border border-[#d0d5dd] bg-white p-1.5 shadow-sm">
+              <div className="relative h-full w-full overflow-hidden rounded-full bg-[#d8dee8]">
+                <Image
+                  src={myPhoto}
+                  alt="Mahesh Bairi portrait"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-sm font-bold uppercase text-[#0f766e]">
+                Mahesh Bairi
+              </p>
+              <p className="mt-1 text-2xl font-black text-[#101828]">
+                UI engineer with product focus
+              </p>
+            </div>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-            <p className="text-3xl font-semibold text-amber-300">10+</p>
-            <p className="mt-2 text-sm text-slate-300">
-              Projects shipped in production
-            </p>
-          </div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-            <p className="text-3xl font-semibold text-emerald-300">3+</p>
-            <p className="mt-2 text-sm text-slate-300">
-              Product domains delivered
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <div className="relative mx-auto w-full max-w-md">
-        <div className="absolute -left-10 top-10 h-32 w-32 rounded-full bg-sky-400/20 blur-3xl" />
-        <div className="absolute -right-6 bottom-8 h-36 w-36 rounded-full bg-amber-300/20 blur-3xl" />
-
-        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl shadow-black/40">
-          <div className="mb-5 rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-4">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
-              Frontend profile
+          <div className="mt-5 rounded-lg bg-[#0f172a] p-5 font-mono text-sm text-[#cbd5e1]">
+            <p>
+              <span className="text-[#38bdf8]">const</span> role ={" "}
+              <span className="text-[#86efac]">&quot;Frontend Developer&quot;</span>;
             </p>
-            <p className="mt-2 text-lg font-semibold text-white">
-              UI engineer with product focus
+            <p className="mt-2">
+              <span className="text-[#38bdf8]">const</span> stack = [
+              <span className="text-[#fde68a]">&quot;React&quot;</span>,{" "}
+              <span className="text-[#fde68a]">&quot;Next.js&quot;</span>,{" "}
+              <span className="text-[#fde68a]">&quot;React Native&quot;</span>];
+            </p>
+            <p className="mt-2 text-[#94a3b8]">
+              build.cleanUI({"{ responsive: true, scalable: true }"});
             </p>
           </div>
 
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem]">
-            <Image
-              src={myPhoto}
-              alt="Mahesh Bairi portrait"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          <div className="mt-5 grid gap-3 sm:grid-cols-3">
-            {["React", "Next.js", "React Native"].map((item) => (
-              <div
+          <div className="mt-5 flex flex-wrap gap-2">
+            {["React", "Next.js", "React Native", "TypeScript"].map((item) => (
+              <span
                 key={item}
-                className="rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-center text-sm text-slate-200"
+                className="rounded-lg border border-[#d0d5dd] bg-[#f8fafc] px-3 py-1.5 text-sm font-bold text-[#344054]"
               >
                 {item}
-              </div>
+              </span>
             ))}
           </div>
         </div>
